@@ -28,7 +28,7 @@ class TestPetShop(unittest.TestCase):
             "breed": "Cornish Rex",
             "price": 100
         }
-# self.cc_pet_shop["pets"][0]["price"] (=the price of Sir Percy)
+
         self.cc_pet_shop = {
             "pets": [
                 {

@@ -24,13 +24,9 @@ def get_pets_by_breed(input_shop, input_breed):
     return pets_by_breed
 
 def find_pet_by_name(input_shop, input_name):
-    pet_found = False
     for pet in input_shop["pets"]:
         if pet["name"] == input_name:
-            pet_found = True
             return pet
-    if pet_found == False:
-        return None
 
 def remove_pet_by_name(input_shop, input_name):
     pets_to_keep = []
@@ -61,7 +57,7 @@ def customer_can_afford_pet(input_customer_index, input_new_pet):
         return False
 
 def sell_pet_to_customer(input_shop, input_pet, input_customer_index):
-    if input_pet != None:
+    if input_pet:
         if customer_can_afford_pet(input_customer_index, input_pet) == True:
             add_pet_to_customer(input_customer_index, input_pet)
             remove_customer_cash(input_customer_index, input_pet["price"])
